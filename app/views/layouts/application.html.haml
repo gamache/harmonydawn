@@ -1,0 +1,51 @@
+!!! 5
+%html
+  %head
+    %title Harmony Dawn
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  %body
+    %header
+      %h1 Harmony Dawn
+      %br/
+      %h3 Consultant &dot; Psychic &dot; Shimpiden
+      %nav
+        %ul
+          %li
+            %a(href="/") News
+            %a(href="/about") About
+            %a(href="/tarot") Tarot
+            %a(href="/reiki") Reiki
+
+    #content
+      = yield
+
+    #sidebar
+      %img.pic(src="//goatse.info/hello.jpg" alt="Harmony Dawn")
+
+      .contact
+        Harmony Dawn
+        %br/
+        %a(href="mailto:harmony@harmonydawn.net") harmony@harmonydawn.net
+        %br/
+        (781)397-7876
+
+      .profile
+        Here is some profile information, perhaps "smokin' hash and chewin'
+        gash" or "SWF, 31, into cats and cat apparel"
+      %br/
+
+      .paypal
+        Fuck you, pay me
+        %img(src="http://www.expanton.com/paypal.png")
+
+      %p
+        Here is such as some text maybe for a signup or something
+      %form(action="/")
+        %input(type="text" name="email")
+        %input(type="submit" value="Boners")
+
+
+    %br(clear="all")/

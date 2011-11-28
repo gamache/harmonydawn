@@ -1,0 +1,87 @@
+$width: 960px;
+$fgcolor: black;
+$html_bgcolor: #100;
+$body_bgcolor: #dda;
+
+* { border: 1px solid red; }
+
+html {
+  background-color: $html_bgcolor;
+  color: $fgcolor;
+}
+
+body {
+  width: $width;
+  height: 100%;
+  margin: 10px auto 10px auto;
+  background-color: $body_bgcolor;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+h1 { font-size: 167%; }
+h2 { font-size: 144%; }
+h3 { font-size: 125%; }
+h1,h2,h3,h4 {
+  display: inline-block;
+  font-weight: bold;
+}
+
+header {
+  display: block;
+  margin: 10px 0 30px 0;
+  padding: 10px;
+  nav {
+    float: right;
+    display: inline-block;
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 125%;
+        a, a:visited {
+          display: inline-block;
+          padding: 0px 25px 0px 25px;
+          color: $fgcolor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  h1 {
+    display: inline-block;
+    //float: left;
+  }
+}
+
+#content {
+  clear: top;
+  float: left;
+  width: 700px;
+  padding: 10px;
+}
+
+#sidebar {
+  padding: 10px;
+  border-left: 1px dotted black;
+  clear: top;
+  float: right;
+  width: 200px;
+  font-size: 89%;
+
+  img {
+    display: block;
+  }
+  img.pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile {
+    font-style: italic;
+  }
+
+  .contact,.profile,.paypal {
+    margin: 10px 0px 10px 0px;
+  }
+}
+
