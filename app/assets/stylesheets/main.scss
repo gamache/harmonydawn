@@ -1,9 +1,9 @@
 $width: 960px;
 $fgcolor: black;
-$html_bgcolor: #100;
-$body_bgcolor: #dda;
+$html_bgcolor: rgb(0,0,0); // #000;
+$body_bgcolor: rgb(220,220,220);
 
-* { border: 1px solid red; }
+// * { border: 1px solid red; }
 
 html {
   background-color: $html_bgcolor;
@@ -15,13 +15,18 @@ body {
   height: 100%;
   margin: 10px auto 10px auto;
   background-color: $body_bgcolor;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'Judson', 'Times New Roman', 'Times', sans-serif;
+  font-size: 16px;
+  border: 0px;
+  border-radius: 10px;
 }
 
-h1 { font-size: 167%; }
-h2 { font-size: 144%; }
-h3 { font-size: 125%; }
+
+
+h1 { font-size: 218%; }
+h2 { font-size: 164%; }
+h3 { font-size: 145%; }
+h4 { font-size: 118%; }
 h1,h2,h3,h4 {
   display: inline-block;
   font-weight: bold;
@@ -29,28 +34,44 @@ h1,h2,h3,h4 {
 
 header {
   display: block;
-  margin: 10px 0 30px 0;
   padding: 10px;
-  nav {
-    float: right;
-    display: inline-block;
-    ul {
-      list-style-type: none;
-      li {
-        font-size: 125%;
-        a, a:visited {
-          display: inline-block;
-          padding: 0px 25px 0px 25px;
-          color: $fgcolor;
-          text-decoration: none;
-        }
-      }
-    }
+  border-bottom: 1px dotted gray;
+  font-size: 110%;
+  .title {
+    font-family: 'Lancelot', 'Times New Roman', 'Times', sans-serif;
+    clear: left;
   }
   h1 {
     display: inline-block;
-    //float: left;
+    margin-bottom: 10px;
   }
+  h3 {
+    display: inline-block;
+    margin-top: 0px;
+  }
+
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    li {
+      margin: 0px 5px 0px 5px;
+      font-size: 125%;
+      a,a:visited {
+        display: inline-block;
+        padding: 0px 25px 0px 25px;
+        color: $body_bgcolor;
+        background-color: $fgcolor;
+        text-decoration: none;
+      }
+    }
+  }
+}
+#content nav {
+  text-align: center;
+  position: relative;
+  top: -10px;
 }
 
 #content {
@@ -58,11 +79,23 @@ header {
   float: left;
   width: 700px;
   padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  box-shadow: 10px 10px;
+  border-radius: 5px;
+  background-color: white;
+
+  h1,h2,h3,h4 {
+    margin: 10px 0px 5px 0px;
+    display: block;
+  }
+
 }
 
 #sidebar {
   padding: 10px;
-  border-left: 1px dotted black;
+  border-left: 1px dotted gray;
   clear: top;
   float: right;
   width: 200px;
@@ -85,3 +118,6 @@ header {
   }
 }
 
+#tarot {
+  h4 { display: inline-block; clear: top;}
+}
