@@ -33,8 +33,9 @@ h1,h2,h3,h4 {
 }
 
 header {
+  background-image: url(/assets/headerbg.png);
+  color: #eee;
   display: block;
-  padding: 10px;
   border-bottom: 1px dotted gray;
   font-size: 110%;
   .title {
@@ -43,35 +44,35 @@ header {
   }
   h1 {
     display: inline-block;
-    margin-bottom: 10px;
+    margin: 10px 0px 0px 10px;
   }
   h3 {
     display: inline-block;
-    margin-top: 0px;
+    margin-left: 10px;
   }
 
 }
 
 nav {
   ul {
+    width: $width;
+    position: relative;
+    left: -10px;
+    bottom: -10px;
+
     list-style-type: none;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
     li {
-      margin: 0px 5px 0px 5px;
       font-size: 125%;
       a,a:visited {
         display: inline-block;
-        padding: 0px 25px 0px 25px;
+        margin-right: 35px;
         color: $body_bgcolor;
-        background-color: $fgcolor;
         text-decoration: none;
       }
     }
   }
-}
-#content nav {
-  text-align: center;
-  position: relative;
-  top: -10px;
 }
 
 #content {
@@ -84,13 +85,11 @@ nav {
 
   box-shadow: 10px 10px;
   border-radius: 5px;
-  background-color: white;
 
   h1,h2,h3,h4 {
     margin: 10px 0px 5px 0px;
     display: block;
   }
-
 }
 
 #sidebar {
@@ -120,4 +119,16 @@ nav {
 
 #tarot {
   h4 { display: inline-block; clear: top;}
+}
+
+#about {
+  border: 1px solid $body_bgcolor; // this makes everything lay out ok for some reason
+
+  background-image: url('/assets/swirly.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  #about-content {
+    margin: 60px 10px 250px 150px;
+  }
 }
