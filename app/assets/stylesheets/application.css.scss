@@ -117,7 +117,7 @@ nav {
   }
 }
 
-#tarot {
+#tarot,#reiki {
   h4 { display: inline-block; clear: top;}
 }
 
@@ -131,4 +131,20 @@ nav {
   #about-content {
     margin: 60px 10px 250px 150px;
   }
+}
+
+blockquote {
+  margin: 10px 0px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 10px;
+  .from {
+    margin-left: 10px;
+  }
+}
+blockquote:nth-child(even) {
+  margin-left: 20px;
+}
+blockquote:nth-child(odd) {
+  margin-right: 20px;
 }
