@@ -1,8 +1,9 @@
 !!! 5
 %html
   %head
-    <!-- site design and implementation by 346 Pearl St -->
+    <!-- site design by pete and meaghan, code by pete -->
     %title Harmony Dawn
+    %link(rel='icon' type='image/png' href='/assets/pentacle.png')
     %link(href='http://fonts.googleapis.com/css?family=Lancelot' rel='stylesheet' type='text/css')
     %link(href='http://fonts.googleapis.com/css?family=Judson' rel='stylesheet' type='text/css')
     = stylesheet_link_tag 'application'
@@ -51,6 +52,20 @@
       %br
       %br
 
+      #fb-root
+      :javascript
+        $(function(){
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        });
+
+      <!-- div class="fb-like" data-href="http://www.facebook.com/harmonydawn.net" data-send="false" data-width="150" data-show-faces="false"></div -->
+
       #paypal
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="cmd" value="_s-xclick">
@@ -63,4 +78,5 @@
       %p Has Harmony Dawn helped you master your potential? Leave your tip or donate here!
 
 
-    %br(clear="all")/
+
+    %br(clear="all")
