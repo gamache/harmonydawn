@@ -83,9 +83,6 @@ nav {
   margin-top: 10px;
   margin-left: 10px;
 
-  box-shadow: 10px 10px;
-  border-radius: 5px;
-
   h1,h2,h3,h4 {
     margin: 10px 0px 5px 0px;
     display: block;
@@ -125,7 +122,7 @@ nav {
   border: 1px solid $body_bgcolor; // this makes everything lay out ok for some reason
 
   background-image: url('/assets/swirly.png');
-  background-position: bottom left;
+  background-position: top left;
   background-repeat: no-repeat;
   min-height: 700px;
   #about-content {
